@@ -13,9 +13,9 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-0  bg-primary backdrop-blur-xl  z-50 rounded-b-xl">
       <div className="flex justify-between p-2 items-center mx-96 ">
-        <div>
+        <Link to="/">
           <img src="/test.png" className="w-48" draggable="false" alt="" />
-        </div>
+        </Link>
         <ul className="flex items-center space-x-8 text-xl">
           <div onClick={() => setShowDropdown(!showDropdown)}>
             <li className="relative flex items-center hover:text-text transition-colors ease-out duration-200 cursor-pointer">
