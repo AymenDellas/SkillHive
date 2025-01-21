@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "./components/LayoutComps/Hero";
-import WhyChoose from "./components/UIComps/WhyChoose";
-import Courses from "./components/UIComps/Courses";
-import Contact from "./components/LayoutComps/Contact";
+import Hero from "./components/Layout-Comps/Hero";
+import WhyChoose from "./components/UI-Comps/WhyChoose";
+import Courses from "./components/UI-Comps/Courses";
+import Contact from "./components/Layout-Comps/Contact";
 import { easeOut, motion } from "motion/react";
 
 const App = () => {

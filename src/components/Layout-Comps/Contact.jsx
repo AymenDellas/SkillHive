@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import Form from "../UIComps/Form";
+import Form from "../UI-Comps/Form";
 
 const Contact = () => {
   return (
