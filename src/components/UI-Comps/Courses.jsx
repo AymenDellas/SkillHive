@@ -12,7 +12,7 @@ const Courses = () => {
             whileInView={{ filter: "blur(0px)", y: 0, opacity: 1 }}
             transition={{ ease: easeOut, duration: 1, delay: 0.2 * index }}
             key={index}
-            className="flex flex-col shadow-2xl justify-between aspect-[9/14] w-72  border bg-primary/50 border-text/50 overflow-hidden rounded-lg"
+            className="flex flex-col shadow-2xl justify-between aspect-[9/14] w-80  border bg-primary/50 border-text/50 overflow-hidden rounded-lg"
           >
             <div
               style={{ backgroundImage: `url(${course.imgUrl})` }}
