@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../UI-Comps/button";
+import Button from "../UI-Comps/Button";
 import SecondaryButton from "../UI-Comps/SecondaryButton";
 import { motion, easeOut } from "motion/react";
 const Hero = () => {
