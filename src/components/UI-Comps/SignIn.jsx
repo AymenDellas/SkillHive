@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { auth } from "../../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth, googleProvider } from "../../../firebase";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { em } from "framer-motion/client";
 import { useNavigate } from "react-router-dom";
 const SignIn = () => {
@@ -23,6 +23,15 @@ const SignIn = () => {
       navigate("/");
     } catch (error) {
       setMessage("This email is not registered , try signing up");
+    }
+  };
+  const handleGoogleSignup = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithPopup(auth, googleProvider);
+      navigate("/");
+    } catch (error) {
+      setMessage("Somethin went wrong");
     }
   };
   return (
@@ -60,6 +69,17 @@ const SignIn = () => {
             />
           </div>
           {message && <p className="text-red-500">{message}</p>}
+          <hr className="bg-black/20 h-1 rounded-full w-1/3 mx-auto" />
+          <p>OR:</p>
+          <hr className="bg-black/20 h-1 rounded-full w-1/2 mx-auto" />
+          <button
+            type="submit"
+            onClick={handleGoogleSignup}
+            className="rounded-full space-x-4 p-2  text-text border border-text text-xl  hover:bg-hover transition-colors duration-300 ease-out flex justify-center items-center"
+          >
+            <img src="/google.svg" className="w-8" alt="Google icon" />
+            <p>Continue with google</p>
+          </button>
           <button
             type="submit"
             className="rounded-lg p-2  bg-button text-white text-xl  hover:bg-hover transition-colors duration-300 ease-out"
