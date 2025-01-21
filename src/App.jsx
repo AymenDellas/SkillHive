@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPage";
 import NavLayout from "./components/Layout-Comps/NavLayout";
 import Contact from "./components/Layout-Comps/Contact";
 import SignUp from "./components/UI-Comps/SignUp";
+import SignIn from "./components/UI-Comps/SignIn";
 import {
   Route,
   createBrowserRouter,
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
       </Route>
     )
   );

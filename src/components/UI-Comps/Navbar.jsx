@@ -1,6 +1,10 @@
 import { useScroll } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { auth } from "../../../firebase";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
 import {
   ChevronDown,
   Clapperboard,
@@ -9,6 +13,16 @@ import {
 } from "lucide-react";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleSignout = async () => {
+    try {
+      console.log(auth.currentUser.email);
+      await signOut(auth);
+      navigate("/");
+    } catch (error) {
+      alert("Something went wrong !");
+    }
+  };
   const [showDropdown, setShowDropdown] = useState(false);
   return (
     <nav className="fixed w-full top-0  bg-primary backdrop-blur-xl  z-50 rounded-b-xl">
@@ -53,17 +67,29 @@ const Navbar = () => {
           >
             <li>Contact</li>
           </Link>
-          <div className="flex items-center space-x-3">
-            <Link className="border border-text/50  text-text p-2 rounded-lg  hover:bg-text/20 transition-colors ease-out duration-200 ">
-              <li>Sign in</li>
-            </Link>
+          {auth.currentUser ? (
             <Link
-              to="/signup"
-              className="border border-text/50 bg-text/80 text-white p-2 rounded-lg  hover:bg-text transition-colors ease-out duration-200 "
+              onClick={handleSignout}
+              className="border border-text/50  text-text p-2 rounded-lg  hover:bg-text/20 transition-colors ease-out duration-200 "
             >
-              <li className="">Sign up</li>
+              <li>Sign out</li>
             </Link>
-          </div>
+          ) : (
+            <div className="flex items-center space-x-3">
+              <Link
+                to="/signin"
+                className="border border-text/50  text-text p-2 rounded-lg  hover:bg-text/20 transition-colors ease-out duration-200 "
+              >
+                <li>Sign in</li>
+              </Link>
+              <Link
+                to="/signup"
+                className="border border-text/50 bg-text/80 text-white p-2 rounded-lg  hover:bg-text transition-colors ease-out duration-200 "
+              >
+                <li className="">Sign up</li>
+              </Link>
+            </div>
+          )}
         </ul>
       </div>
     </nav>
