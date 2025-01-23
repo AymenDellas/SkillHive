@@ -12,6 +12,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+import CoursesPage from "./components/UI-Comps/CoursesPage";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const App = () => {
           path="/reset-password-confirm"
           element={<ResetPasswordConfirm />}
         />
+        <Route path="/courses" element={<CoursesPage />} />
       </Route>
     )
   );

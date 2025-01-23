@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { auth } from "../../../firebase";
-import { sendPasswordResetEmail } from "firebase/auth";
+import {
+  sendPasswordResetEmail,
+  fetchSignInMethodsForEmail,
+  SignInMethod,
+} from "firebase/auth";
 
 const ResetPassword = () => {
   const [email, setEmail] = useState("");
@@ -9,9 +13,14 @@ const ResetPassword = () => {
 
   const handlePasswordResetEmail = async (e) => {
     e.preventDefault();
-
-    if (!email.trim()) {
+    if (!email) {
       setMessage("Please enter a valid email.");
+      return;
+    }
+    const signinMethods = await fetchSignInMethodsForEmail(auth, email);
+    const isGoogleAccount = signinMethods.includes("google.com");
+    if (isGoogleAccount) {
+      setMessage("The email is already registered with google");
       return;
     }
 
@@ -34,7 +43,7 @@ const ResetPassword = () => {
         </h1>
         <form
           onSubmit={handlePasswordResetEmail}
-          className="flex flex-col space-y-4"
+          className="flex flex-col w-full space-y-4"
         >
           <input
             value={email}
@@ -43,21 +52,21 @@ const ResetPassword = () => {
             placeholder="Enter your email"
             className="p-4 rounded-lg border border-text"
           />
-          {successMessage && !message && (
+          {successMessage && (
             <p className="text-green-700 p-4 bg-green-400/20 border border-green-400 rounded-lg">
               {successMessage}
             </p>
           )}
-          {message && (
+          {message && !successMessage && (
             <p className="text-red-700 p-4 bg-red-400/20 border border-red-400 rounded-lg">
               {message}
             </p>
           )}
           <button
             type="submit"
-            className="rounded-lg p-2 bg-button text-white text-xl"
+            className="rounded-lg p-2  m bg-button text-white text-xl"
           >
-            Send Reset Email
+            Send Link
           </button>
         </form>
       </div>

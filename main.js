@@ -34,6 +34,9 @@ export const courses = [
     duration: "10 Hours",
     level: "Beginner",
     price: "7500",
+    type: "programming",
+    description:
+      "Master the foundations of web development with HTML5 & CSS3. This beginner-friendly course covers semantic HTML, responsive design, and modern CSS techniques. By the end, you'll be able to build beautiful, structured, and mobile-friendly websites from scratch. Perfect for aspiring web developers looking to start their journey.",
   },
 
   {
@@ -43,6 +46,9 @@ export const courses = [
     duration: "10 Hours",
     level: "Beginner",
     price: "10000",
+    type: "editing",
+    description:
+      "Learn professional video editing with DaVinci Resolve—a powerful industry-standard software. This course covers cutting, color grading, transitions, audio mixing, and exporting high-quality videos. Ideal for beginners looking to create cinematic edits, YouTube content, or even commercial projects.",
   },
   {
     imgUrl: "/design.png",
@@ -51,5 +57,8 @@ export const courses = [
     duration: "10 Hours",
     level: "Beginner",
     price: "4500",
+    type: "design",
+    description:
+      "Get started with graphic design and understand the principles of typography, color theory, and layout design. Learn how to use modern design tools to create eye-catching visuals, social media graphics, and professional branding. This course is perfect for anyone looking to develop a creative skillset in design.",
   },
 ];

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { auth } from "../../../firebase";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Tally3 } from "lucide-react";
 
 import {
   ChevronDown,
@@ -50,18 +50,27 @@ const Navbar = () => {
                     : "invisible opacity-0 translate-y-11"
                 }  rounded-xl shadow-2xl z-50  mt-4 flex-col items-center absolute  transition-all duration-500 ease-out`}
               >
-                <Link className="hover:bg-black/10 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
-                  <SquareCode />
-                  <p>Programming</p>
+                <Link
+                  to="/courses"
+                  className="hover:bg-black/10 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1"
+                >
+                  <Tally3 />
+                  <p>All</p>
                 </Link>
-                <Link className="hover:bg-slate-300/50 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
-                  <Clapperboard />
-                  <p>Video Editing</p>
-                </Link>
-                <Link className="hover:bg-slate-300/50 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
-                  <PaintbrushVertical />
-                  <p>Graphic Design</p>
-                </Link>
+                <div className="ml-4">
+                  <Link className="hover:bg-black/10 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
+                    <SquareCode />
+                    <p>Programming</p>
+                  </Link>
+                  <Link className="hover:bg-slate-300/50 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
+                    <Clapperboard />
+                    <p>Video Editing</p>
+                  </Link>
+                  <Link className="hover:bg-slate-300/50 transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
+                    <PaintbrushVertical />
+                    <p>Graphic Design</p>
+                  </Link>
+                </div>
               </div>
             </div>
             <Link
