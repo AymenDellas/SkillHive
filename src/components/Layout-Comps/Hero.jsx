@@ -5,7 +5,7 @@ import { motion, easeOut } from "motion/react";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col items-center space-y-8 py-48">
+      <div className="flex relative flex-col items-center space-y-8 py-48">
         <div className="text-5xl lg:text-6xl z-10 font-extrabold justify-center text-text text-center ">
           <motion.h1
             initial={{ filter: "blur(10px)", y: -20, opacity: 0 }}
@@ -18,8 +18,16 @@ const Hero = () => {
             initial={{ filter: "blur(10px)", y: 20, opacity: 0 }}
             animate={{ filter: "blur(0px)", y: 0, opacity: 1 }}
             transition={{ ease: easeOut, duration: 1 }}
-            className="z-10 underline underline-offset-8 rounded-sm relative bg-text text-white p-4 w-fit mx-auto my-4"
+            className=" relative underline underline-offset-8  z-10 rounded-sm bg-text text-white p-4 w-fit mx-auto my-4"
           >
+            <div className="absolute -bottom-12  -right-12">
+              <img
+                src="/choose-orange-shape.svg"
+                draggable="false"
+                className="w-16 rotate-90"
+                alt=""
+              />
+            </div>
             <motion.h1
               initial={{ filter: "blur(10px)", y: -20, opacity: 0 }}
               animate={{ filter: "blur(0px)", y: 0, opacity: 1 }}
@@ -80,7 +88,7 @@ const Hero = () => {
             <SecondaryButton text={"Browse Courses"} />
           </motion.div>
         </div>
-        <div className="blob size-[700px] absolute top-0 rounded-full  bg-[#bae6e7] z-0 "></div>
+        <div className="blob size-[700px] max-lg:size-[400px] absolute top-0 rounded-full  bg-[#00000075] z-0 "></div>
       </div>
     </>
   );

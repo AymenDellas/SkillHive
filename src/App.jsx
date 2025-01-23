@@ -4,6 +4,8 @@ import NavLayout from "./components/Layout-Comps/NavLayout";
 import Contact from "./components/Layout-Comps/Contact";
 import SignUp from "./components/UI-Comps/SignUp";
 import SignIn from "./components/UI-Comps/SignIn";
+import ResetPassword from "./components/UI-Comps/ResetPassword";
+import ResetPasswordConfirm from "./components/UI-Comps/ResetPasswordConfirm";
 import {
   Route,
   createBrowserRouter,
@@ -19,6 +21,11 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route
+          path="/reset-password-confirm"
+          element={<ResetPasswordConfirm />}
+        />
       </Route>
     )
   );

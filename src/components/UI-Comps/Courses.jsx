@@ -4,7 +4,7 @@ import { Clock } from "lucide-react";
 import { motion, easeOut } from "motion/react";
 const Courses = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap mx-80  max-xl:mx-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-8 mx-80  max-xl:mx-8">
       {courses.map((course, index) => {
         return (
           <motion.div

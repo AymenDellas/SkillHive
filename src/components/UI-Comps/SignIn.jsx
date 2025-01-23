@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { auth, googleProvider } from "../../../firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { em } from "framer-motion/client";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const SignIn = () => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const SignIn = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (error) {
-      setMessage("This email is not registered , try signing up");
+      setMessage("Incorrect Email/Password");
     }
   };
   const handleGoogleSignup = async (e) => {
@@ -35,7 +35,7 @@ const SignIn = () => {
     }
   };
   return (
-    <div className="z-50  pt-64">
+    <div className="z-50  pt-32">
       <div className="flex flex-col items-center space-y-8 border bg-white border-text p-12 shadow-xl w-fit mx-auto rounded-lg">
         <div className="flex flex-col items-center">
           <img src="/logoo.png" className="w-48" alt="" />
@@ -54,7 +54,7 @@ const SignIn = () => {
               name="email"
               type="email"
               placeholder="Email"
-              className="p-4 rounded-lg border border-text border-dashed outline-none"
+              className="p-4 rounded-lg border border-text focus:ring-2 border-dashed outline-none ring-hover/50 transition-all duration-100 ease-out"
             />
           </div>
           <div className="flex justify-between items-center space-x-2">
@@ -65,13 +65,17 @@ const SignIn = () => {
               name="password"
               type="password"
               placeholder="Password"
-              className="p-4 rounded-lg border border-text border-dashed outline-none"
+              className="p-4 rounded-lg border focus:ring-2 ring-hover/50 transition-all duration-100 ease-out border-text border-dashed outline-none"
             />
           </div>
           {message && <p className="text-red-500">{message}</p>}
-          <hr className="bg-black/20 h-1 rounded-full w-1/3 mx-auto" />
-          <p>OR:</p>
-          <hr className="bg-black/20 h-1 rounded-full w-1/2 mx-auto" />
+          <Link
+            to="/reset-password"
+            className="underline text-text/50 float-right"
+          >
+            Reset your password ?
+          </Link>
+
           <button
             type="submit"
             onClick={handleGoogleSignup}

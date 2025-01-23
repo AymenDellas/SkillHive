@@ -40,7 +40,7 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="z-50  pt-64">
+    <div className="z-50  pt-32">
       <div className="flex flex-col items-center space-y-8 border bg-white border-text p-12 shadow-xl w-fit mx-auto rounded-lg">
         <div className="flex flex-col items-center">
           <img src="/logoo.png" className="w-48" alt="" />

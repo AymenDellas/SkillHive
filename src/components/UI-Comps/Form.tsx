@@ -214,7 +214,7 @@ const Form = () => {
 
           <button
             type="submit"
-            className="pageclip-form__submit w-fit bg-[length:200%_200%] duration-500 space-x-2 cursor-pointer bg-right hover:bg-left z-50 bg-primary bg-gradient-to-r from-secondary via-amber-800 to-secondary rounded-lg text-brighterHighlight px-8 transition-all py-2"
+            className="pageclip-form__submit w-fit  duration-200 space-x-2 ease-out cursor-pointer bg-right hover:bg-left z-50 bg-text text-primary hover:bg-text/80 rounded-lg text-brighterHighlight px-8 transition-all py-2"
           >
             <p>Send!</p>
           </button>
