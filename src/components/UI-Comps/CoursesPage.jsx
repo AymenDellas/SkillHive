@@ -5,16 +5,16 @@ import { Clock } from "lucide-react";
 const CoursesPage = () => {
   return (
     <>
-      <div className="flex flex-col items-center pt-36 pb-12 space-y-12 ">
+      <div className="flex flex-col items-center pt-36 pb-12 space-y-12 overflow-hidden ">
         {courses.map((course, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col lg:flex-row border  border-text h-72 rounded-lg w-[70%] bg-white"
+              className="flex flex-col lg:flex-row border overflow-hidden border-text  rounded-lg w-[70%] bg-white"
             >
               <div
                 style={{ backgroundImage: `url(${course.imgUrl})` }}
-                className="h-full w-1/2 bg-center bg-cover"
+                className="h-auto w-1/2 bg-center bg-cover "
               ></div>
               <div className="m-8 space-y-4 w-full h-full">
                 <h1 className="font-bold text-lg mb-2">{course.title}</h1>
