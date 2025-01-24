@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "./Layout-Comps/Hero";
 import WhyChoose from "./UI-Comps/WhyChoose";
 import Courses from "./UI-Comps/Courses";
-import Contact from "./Layout-Comps/Contact";
 import { easeOut, motion } from "motion/react";
 const LandingPage = () => {
   return (

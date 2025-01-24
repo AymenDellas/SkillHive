@@ -14,23 +14,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CoursesPage from "./components/UI-Comps/CoursesPage";
-import Footer from "./components/UI-Comps/Footer";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<NavLayout />}>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
-        <Route
-          path="/reset-password-confirm"
-          element={<ResetPasswordConfirm />}
-        />
-        <Route path="/courses" element={<CoursesPage />} />
-      </Route>
+      <>
+        <Route element={<NavLayout />}>
+          <Route path="/" element={<LandingPage />} />
+
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route
+            path="/reset-password-confirm"
+            element={<ResetPasswordConfirm />}
+          />
+          <Route path="/courses" element={<CoursesPage />} />
+        </Route>
+      </>
     )
   );
   return (

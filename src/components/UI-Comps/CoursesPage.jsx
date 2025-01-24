@@ -10,21 +10,21 @@ const CoursesPage = () => {
           return (
             <div
               key={index}
-              className="flex flex-col lg:flex-row border overflow-hidden border-text  rounded-lg w-[70%] bg-white"
+              className="flex flex-col lg:flex-row border overflow-hidden border-text  rounded-lg w-[90%] bg-white"
             >
               <div
                 style={{ backgroundImage: `url(${course.imgUrl})` }}
-                className="h-auto w-1/2 bg-center bg-cover "
+                className="min-h-80 min-w-full bg-center bg-cover "
               ></div>
-              <div className="m-8 space-y-4 w-full h-full">
+              <div className="m-8 space-y-4 ">
                 <h1 className="font-bold text-lg mb-2">{course.title}</h1>
                 <p>{course.description}</p>
                 <div className="flex justify-between items-center">
                   <div className="flex flex-col space-y-4">
-                    <p>Level :{course.level}</p>
+                    <p>Level : {course.level}</p>
                     <div className="flex items-center space-x-1">
                       <Clock />
-                      <p>{course.duration}</p>
+                      <p>Duration : {course.duration}</p>
                     </div>
                   </div>
                   <div className="flex flex-col space-y-4">

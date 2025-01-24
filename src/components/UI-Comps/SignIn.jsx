@@ -3,6 +3,7 @@ import { auth, googleProvider } from "../../../firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
 const SignIn = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -35,7 +36,7 @@ const SignIn = () => {
     }
   };
   return (
-    <div className="z-50  pt-32">
+    <div className="z-50  min-h-screen pt-36">
       <div className="flex flex-col items-center space-y-8 border bg-white border-text p-12 shadow-xl w-fit mx-auto rounded-lg">
         <div className="flex flex-col items-center">
           <img src="/logoo.png" className="w-48" alt="" />
@@ -91,6 +92,16 @@ const SignIn = () => {
             Signin
           </button>
         </form>
+      </div>
+      <div class="w-screen h-screen overflow-hidden bg-transparent transform translate-z-0 rounded-sm relative">
+        <div id="One">
+          <canvas
+            class="w-screen h-screen absolute pointer-events-none"
+            data-generated="false"
+            width="523"
+            height="882"
+          ></canvas>
+        </div>
       </div>
     </div>
   );

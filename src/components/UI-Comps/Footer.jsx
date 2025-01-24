@@ -24,8 +24,12 @@ const Footer = () => {
           <div className="flex space-y-4 underline flex-col">
             <Link>About Us</Link>
             <Link>Contact Us</Link>
-            <Link>Privacy Policy</Link>
-            <Link>Terms & Conditions</Link>
+            <a href="/privacy-policy.html" target="_blank">
+              Privacy Policy
+            </a>
+            <a href="/terms-conditions.html" target="_blank">
+              Terms & Conditions
+            </a>
           </div>
         </div>
         <div className="mx-4">
