@@ -5,7 +5,7 @@ import { Clock } from "lucide-react";
 const CoursesPage = () => {
   return (
     <>
-      <div className="flex flex-col items-center pt-48 space-y-12 ">
+      <div className="flex flex-col items-center pt-36 pb-12 space-y-12 ">
         {courses.map((course, index) => {
           return (
             <div

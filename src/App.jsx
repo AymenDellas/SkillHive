@@ -6,6 +6,7 @@ import SignUp from "./components/UI-Comps/SignUp";
 import SignIn from "./components/UI-Comps/SignIn";
 import ResetPassword from "./components/UI-Comps/ResetPassword";
 import ResetPasswordConfirm from "./components/UI-Comps/ResetPasswordConfirm";
+
 import {
   Route,
   createBrowserRouter,
@@ -13,6 +14,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CoursesPage from "./components/UI-Comps/CoursesPage";
+import Footer from "./components/UI-Comps/Footer";
 
 const App = () => {
   const router = createBrowserRouter(

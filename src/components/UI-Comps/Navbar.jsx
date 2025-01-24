@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link to="/">
             <img src="/test.png" className="w-48" draggable="false" alt="" />
           </Link>
-          <ul className="hidden lg:flex items-center space-x-8 text-xl">
+          <ul className="hidden lg:flex items-center space-x-8 ">
             <div onClick={() => setShowDropdown(!showDropdown)}>
               <li className="relative flex items-center hover:text-text transition-colors ease-out duration-200 cursor-pointer">
                 <p>Courses</p>

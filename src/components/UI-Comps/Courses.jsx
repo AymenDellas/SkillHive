@@ -4,19 +4,19 @@ import { Clock } from "lucide-react";
 import { motion, easeOut } from "motion/react";
 const Courses = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-8 mx-80  max-xl:mx-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 pb-20 gap-12 justify-self-center    mx-80  max-xl:mx-8">
       {courses.map((course, index) => {
         return (
           <motion.div
             initial={{ filter: "blur(10px)", y: -40, opacity: 0 }}
             whileInView={{ filter: "blur(0px)", y: 0, opacity: 1 }}
-            transition={{ ease: easeOut, duration: 1, delay: 0.2 * index }}
+            transition={{ ease: easeOut, duration: 1, delay: 0.3 * index }}
             key={index}
-            className="flex flex-col shadow-2xl justify-between aspect-[9/14] w-80  border bg-primary/50 border-text/50 overflow-hidden rounded-lg"
+            className="flex flex-col flex-grow shadow-2xl justify-between h-fit  w-80  border bg-primary/50 border-text/50 overflow-hidden rounded-lg"
           >
             <div
               style={{ backgroundImage: `url(${course.imgUrl})` }}
-              className="min-h-[50%] min-w-full bg-center  bg-cover"
+              className="min-h-[300px] min-w-full bg-center  bg-cover"
             ></div>
             <div className="my-4  space-y-2 mx-2">
               <p className="text-indigo-600 opacity-70 underline ">
