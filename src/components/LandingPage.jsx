@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Layout-Comps/Hero";
 import WhyChoose from "./UI-Comps/WhyChoose";
 import Courses from "./UI-Comps/Courses";
+import Footer from "./UI-Comps/Footer";
 import { easeOut, motion } from "motion/react";
 const LandingPage = () => {
   return (
@@ -22,16 +23,9 @@ const LandingPage = () => {
         </p>
       </motion.div>
       <WhyChoose />
-      <div className="flex flex-col items-center my-12 space-y-4">
-        <h1 className="text-5xl text-text font-bold">
-          Featured <span className="text-text/70">Courses</span>
-        </h1>
-        <p className="text-text text-lg">
-          Explore our initial offerings in programming, video editing, and
-          design
-        </p>
-      </div>
+
       <Courses />
+      <Footer />
     </div>
   );
 };

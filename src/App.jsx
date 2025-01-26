@@ -6,7 +6,9 @@ import SignUp from "./components/UI-Comps/SignUp";
 import SignIn from "./components/UI-Comps/SignIn";
 import ResetPassword from "./components/UI-Comps/ResetPassword";
 import ResetPasswordConfirm from "./components/UI-Comps/ResetPasswordConfirm";
-
+import { onAuthStateChanged } from "firebase/auth";
+import { useState, useEffect } from "react";
+import { auth } from "../firebase";
 import {
   Route,
   createBrowserRouter,
@@ -16,6 +18,15 @@ import {
 import CoursesPage from "./components/UI-Comps/CoursesPage";
 
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return unsubscribe;
+  }, []);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>

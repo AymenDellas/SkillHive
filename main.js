@@ -1,64 +1,74 @@
-import { Code, Video, PenTool, Clock } from "lucide-react";
+import { Code, Layout, PenTool, Clock } from "lucide-react";
 
 export const cards = [
   {
     icon: Code,
-    title: "Programming",
+    title: "Web Development",
     description:
-      "Learn programming languages and frameworks from passionate coders.",
+      "Build modern, responsive websites with hands-on coding projects.",
   },
   {
-    icon: Video,
-    title: "Video Editing",
+    icon: Layout,
+    title: "UI/UX Design",
     description:
-      "Explore video editing techniques and software with experienced creators.",
+      "Learn how to design intuitive and user-friendly digital experiences.",
   },
   {
     icon: PenTool,
-    title: "Design",
-    description: "Develop your creative skills with hands-on design courses.",
+    title: "Design Tools",
+    description: "Master Figma, Adobe XD, and essential design software.",
   },
   {
     icon: Clock,
-    title: "Flexible Learning",
+    title: "Learn at Your Pace",
     description:
-      "Study at your own pace with unlimited access to course content.",
+      "No deadlines—access all courses anytime and learn on your schedule.",
   },
 ];
 
 export const courses = [
   {
     imgUrl: "/coding.jpg",
-    tag: "Programming",
-    title: "HTML5 & CSS3 Fundamentals",
+    tag: "Web Development",
+    title: "HTML & CSS Foundations",
     duration: "10 Hours",
     level: "Beginner",
     price: "7500",
-    type: "programming",
+    type: "web",
     description:
-      "Master the foundations of web development with HTML5 & CSS3. This beginner-friendly course covers semantic HTML, responsive design, and modern CSS techniques. By the end, you'll be able to build beautiful, structured, and mobile-friendly websites from scratch. Perfect for aspiring web developers looking to start their journey.",
-  },
-
-  {
-    imgUrl: "/editing.jpg",
-    tag: "Video Editing",
-    title: "Davinci resolve 101",
-    duration: "10 Hours",
-    level: "Beginner",
-    price: "10000",
-    type: "editing",
-    description:
-      "Learn professional video editing with DaVinci Resolve—a powerful industry-standard software. This course covers cutting, color grading, transitions, audio mixing, and exporting high-quality videos. Ideal for beginners looking to create cinematic edits, YouTube content, or even commercial projects.",
+      "Learn the core building blocks of the web—HTML & CSS. This course covers modern techniques, responsive design, and best practices to create stunning, accessible websites from scratch.",
   },
   {
-    imgUrl: "/design.png",
-    tag: "Design",
-    title: "Design 101",
-    duration: "10 Hours",
+    imgUrl: "/javascript.jpg",
+    tag: "Web Development",
+    title: "JavaScript for Beginners",
+    duration: "12 Hours",
     level: "Beginner",
-    price: "4500",
+    price: "8500",
+    type: "web",
+    description:
+      "Understand JavaScript fundamentals and how to bring websites to life with interactivity, DOM manipulation, and event handling. Perfect for those ready to move beyond static pages.",
+  },
+  {
+    imgUrl: "/figma.png",
+    tag: "UI/UX Design",
+    title: "Figma for UI Design",
+    duration: "8 Hours",
+    level: "Beginner",
+    price: "6000",
     type: "design",
     description:
-      "Get started with graphic design and understand the principles of typography, color theory, and layout design. Learn how to use modern design tools to create eye-catching visuals, social media graphics, and professional branding. This course is perfect for anyone looking to develop a creative skillset in design.",
+      "Master Figma, the industry-standard tool for UI design. Learn how to create wireframes, prototypes, and high-fidelity designs for websites and mobile apps.",
+  },
+  {
+    imgUrl: "/ux.png",
+    tag: "UI/UX Design",
+    title: "UX Principles & Research",
+    duration: "10 Hours",
+    level: "Intermediate",
+    price: "9000",
+    type: "design",
+    description:
+      "Go beyond visuals—understand user experience principles, usability testing, and user research techniques to craft products that truly connect with users.",
   },
 ];

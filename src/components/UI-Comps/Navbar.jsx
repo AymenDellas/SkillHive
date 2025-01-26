@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       {/*large screens*/}
-      <nav className=" fixed w-full top-0  bg-primary/50 backdrop-blur-xl shadow-2xl z-50 rounded-b-xl">
+      <nav className=" fixed w-full top-0  bg-primary/50 backdrop-blur-xl shadow-xl z-50 rounded-b-xl">
         <div className="flex justify-between p-2 items-center  mx-2 xl:mx-48 2xl:mx-96  ">
           <Link to="/">
             <img src="/test.png" className="w-48" draggable="false" alt="" />
@@ -111,15 +111,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
             />
             <div
-              className={`bg-text text-primary ${
+              className={`bg-background text-primary border border-text/50 transition-all duration-500 ease-out w-[70%] top-24 p-8 rounded-lg  shadow-2xl right-4 z-50 absolute h-fit${
                 isOpen
                   ? "translate-x-0 opacity-100"
                   : "translate-x-[110%] opacity-0"
-              } transition-all duration-500 ease-out w-[70%] top-24 p-8 rounded-lg  shadow-2xl right-4 z-50 absolute h-fit`}
+              } `}
             >
-              <div className="flex justify-center mb-8">
-                <img src="/whitelogotitle.png" className="w-48" alt="" />
-              </div>
+              <hr className="h-0.5 bg-text/50 mb-4 w-1/2 mx-auto" />
               <ul className="space-y-8">
                 <div
                   className="space-y-4"
@@ -143,15 +141,12 @@ const Navbar = () => {
                     >
                       <Link className="hover:bg-black/10  text-text transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
                         <SquareCode />
-                        <p>Programming</p>
+                        <p>Web development</p>
                       </Link>
-                      <Link className="hover:bg-slate-300/50 text-text  transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
-                        <Clapperboard />
-                        <p>Video Editing</p>
-                      </Link>
+
                       <Link className="hover:bg-slate-300/50 text-text  transition-colors ease-out duration-200 p-4 rounded-lg w-full text-center flex items-center space-x-1">
                         <PaintbrushVertical />
-                        <p>Graphic Design</p>
+                        <p>UI/UX Design</p>
                       </Link>
                     </div>
                   </div>
@@ -176,13 +171,13 @@ const Navbar = () => {
                     <div className="flex flex-col justify-center space-y-4 text-center">
                       <Link
                         to="/signin"
-                        className="border border-primary  text-primary p-2 rounded-lg  hover:bg-primary/10 transition-colors ease-out duration-200 "
+                        className="border border-text/50  text-text p-2 rounded-lg  hover:bg-text/10 transition-colors ease-out duration-200 "
                       >
                         <li>Sign in</li>
                       </Link>
                       <Link
                         to="/signup"
-                        className="border border-primary bg-primary text-text p-2 rounded-lg  hover:bg-primary/80 transition-colors ease-out duration-200 "
+                        className="border border-text/50 bg-button text-white p-2 rounded-lg  hover:bg-button/80 transition-colors ease-out duration-200 "
                       >
                         <li className="">Sign up</li>
                       </Link>
