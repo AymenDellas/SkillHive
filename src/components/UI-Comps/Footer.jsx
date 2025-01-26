@@ -4,7 +4,7 @@ const Footer = () => {
   const date = new Date().getFullYear();
   return (
     <footer className="bg-gradient-to-r from-[#232526] to-[#414345]  text-primary py-8 rounded-t-3xl">
-      <div className="grid grid-cols-4 justify-items-center ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 justify-items-center text-white text-center ">
         <div className="flex flex-col items-center">
           <img
             src="/whitelogo.png"
@@ -20,7 +20,7 @@ const Footer = () => {
           />
         </div>
         <div className="mx-4">
-          <h1 className="font-bold text-lg my-2">Company & Legal</h1>
+          <h1 className="font-bold text-lg my-4">Company & Legal</h1>
           <div className="flex space-y-4 underline flex-col">
             <Link>About Us</Link>
             <Link>Contact Us</Link>
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mx-4">
-          <h1 className="font-bold text-lg my-2">Learning & Courses</h1>
+          <h1 className="font-bold text-lg my-4">Learning & Courses</h1>
           <div className="flex space-y-4 underline flex-col">
             <Link>All Courses</Link>
             <Link>Programming</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mx-4">
-          <h1 className="font-bold text-lg my-2">User Account & Support</h1>
+          <h1 className="font-bold text-lg my-4">User Account & Support</h1>
           <div className="flex space-y-4 underline flex-col">
             <Link>My Account</Link>
             <Link>Login / Sign Up</Link>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mx-4">
-          <h1 className="font-bold text-lg my-2">Social & Community</h1>
+          <h1 className="font-bold text-lg my-4">Social & Community</h1>
           <div className="flex space-y-4 underline flex-col">
             <Link>Discord</Link>
             <Link>Instagram</Link>

@@ -4,7 +4,7 @@ import { cards } from "../../../main";
 const Cards = () => {
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-80  max-xl:mx-8">
+      <div className="relative grid grid-cols-1 lg:grid-cols-3 justify-center gap-8 mx-80  max-xl:mx-8">
         {cards.map((card, index) => {
           return (
             <div
@@ -19,6 +19,7 @@ const Cards = () => {
             </div>
           );
         })}
+        <div class="absolute bottom-0  left-0 -translate-x-full translate-y-72 -z-10  h-[500px] w-[500px]  rounded-full bg-[rgba(173,109,244,0.6)] opacity-50 blur-[90px]"></div>
       </div>
     </>
   );

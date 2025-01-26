@@ -14,7 +14,7 @@ const CoursesPage = () => {
         {courses.map((course, index) => (
           <div
             key={index}
-            className="bg-cardBg border border-gray-200 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105"
+            className="bg-cardBg border border-text/20 rounded-xl shadow-lg  overflow-hidden  transition-all hover:border-text/50  duration-200  ease-out"
           >
             <div
               className="w-full h-48 bg-cover bg-center"
@@ -32,8 +32,8 @@ const CoursesPage = () => {
                   Level: <strong>{course.level}</strong>
                 </span>
                 <span className="flex items-center">
+                  Duration : {course.duration}
                   <Clock className="w-4 h-4 mr-1" />
-                  {course.duration}
                 </span>
               </div>
 

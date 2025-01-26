@@ -43,9 +43,9 @@ const SignIn = () => {
     }
   };
   return (
-    <div className="z-50   pt-36">
-      <div className="flex flex-col justify-between  border bg-white border-text  shadow-xl  w-fit    px-12 py-8  mx-auto rounded-lg">
-        <div className="space-y-1 mb-4 flex flex-col items-center mx-20">
+    <div className="z-50 pt-36 mx-6">
+      <div className="flex flex-col justify-between  border bg-white border-text  shadow-xl  w-full max-w-[400px]    px-12 py-8  mx-auto rounded-lg">
+        <div className="space-y-1 mb-4 flex flex-col items-center text-center">
           <div className="">
             <img src="/blacklogo.png" alt="skillhive logo" className="w-32" />
           </div>

@@ -58,8 +58,8 @@ const SignUp = () => {
   };
   return (
     <div className="z-50   pt-32">
-      <div className="flex flex-col justify-between  border bg-white border-text  shadow-xl  w-fit    px-12 py-4  mx-auto rounded-lg">
-        <div className="space-y-1 mb-4 flex flex-col items-center mx-12">
+      <div className="flex flex-col justify-between  border bg-white border-text shadow-xl w-full max-w-[400px] px-12 py-4  mx-auto rounded-lg">
+        <div className="space-y-1 mb-4 flex flex-col items-center text-center">
           <div className="">
             <img src="/blacklogo.png" alt="skillhive logo" className="w-32 " />
           </div>

@@ -26,6 +26,8 @@ const Hero = () => {
             <SecondaryButton text={"Browse Courses"} />
           </Link>
         </div>
+
+        <div class="absolute  right-48 -z-10 bottom-0 h-[500px] w-[500px] rounded-full bg-[rgba(173,109,244,0.6)] opacity-50 blur-[90px]"></div>
       </div>
     </>
   );

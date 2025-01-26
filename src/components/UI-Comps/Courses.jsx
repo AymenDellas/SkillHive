@@ -26,10 +26,8 @@ const Courses = () => {
                 className="h-48 min-w-full bg-center bg-cover  z-10"
               ></div>
               <div className="my-4 space-y-4 mx-2 z-10">
-                <p className="text-indigo-600 opacity-70 underline ">
-                  {course.tag}
-                </p>
-                <h1 className="text-xl font-semibold">{course.title}</h1>
+                <p className="text-button">{course.tag}</p>
+                <h1 className="text-lg font-semibold">{course.title}</h1>
                 <div className="flex items-center space-x-2">
                   <Clock />
                   <p>{course.duration}</p>
@@ -42,7 +40,7 @@ const Courses = () => {
                   </p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <h1 className="font-bold text-xl text-green-600">
+                  <h1 className="font-bold text-lg text-green-600">
                     DZD {course.price}
                   </h1>
                   <button className="rounded-lg p-2  bg-button text-white   hover:bg-hover transition-colors duration-300 ease-out">
